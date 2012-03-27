@@ -1,0 +1,14 @@
+.DS_Store
+*~
+*.pdf
+.project
+.loadpath
+.yardoc
+*.gem
+*.tar*
+**/ext/bin
+**/classes
+/doc/api
+**log
+/test/results
+
