@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'jinx'
   s.add_dependency 'json_pure'
   s.add_development_dependency 'rake'
-  s.add_development_dependency 'rspec', '~> 1.3.2'
+  s.add_development_dependency 'rspec', '>= 2.6'
   s.has_rdoc      = 'yard'
   s.license       = 'MIT'
   s.rubyforge_project = 'jinx'
