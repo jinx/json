@@ -9,7 +9,7 @@ Jinx JSON plug-in
 
 Synopsis
 --------
-Jinx JSON enables JSON serialization for [Jinx]((http://github.com/jinx/core) resources.
+Jinx JSON enables JSON serialization for [Jinx](http://github.com/jinx/core) resources.
 
 Installing
 ----------
@@ -19,7 +19,7 @@ Jinx JSON is installed as a JRuby gem:
 
 Usage
 -----
-Enable Jinx for a Java package, as described in the [Jinx]((http://github.com/jinx/json/core) Usage.
+Enable Jinx for a Java package, as described in the [Jinx](http://github.com/jinx/json/core) Usage.
 
     require 'jinx/json'
     jsoned = jinxed.to_json #=> the JSON representation of a jinxed resource

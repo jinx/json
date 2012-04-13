@@ -17,8 +17,16 @@ task :install => :gem do
   sh "#{SUDO} jgem install #{GEM}-#{GEM_VERSION}.gem"
 end
 
-desc "Runs all tests"
-task :test do
-  pat = File.dirname(__FILE__) + '/**/test/**/*_test.rb'
-  Dir[pat].each { |f| sh "jruby #{f}" }
+desc 'Documents the API'
+task :doc do
+  FileUtils.rm_rf 'doc/api'
+  sh 'yardoc'
 end
+
+desc 'Runs the spec tests'
+task :spec do
+  Dir['spec/**/*_spec.rb'].each { |f| sh "rspec #{f}" rescue nil }
+end
+
+desc 'Runs all tests'
+task :test => :spec
