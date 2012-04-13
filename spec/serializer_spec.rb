@@ -1,5 +1,4 @@
-require File.dirname(__FILE__) + '/../test/helper'
-require 'jinx/json/serializer'
+require 'spec/spec_helper'
 
 module Family
   describe Address do
