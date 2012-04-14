@@ -1,6 +1,5 @@
 require 'json'
 require 'jinx/json/collection'
-require 'jinx/json/importer'
 
 module Jinx
   module JSON
@@ -29,14 +28,6 @@ module Jinx
           'json_class' => json_class_name,
           'data' => json_value_hash
         }.to_json(*args)
-      end
-      
-      # Extends the including module with {Importer}.
-      #
-      # @param [Module] mod the including module
-      def self.included(mod)
-        super
-        mod.extend(Importer)
       end
       
       private
