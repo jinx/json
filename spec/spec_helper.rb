@@ -6,8 +6,8 @@ Bundler.require(:test, :development)
 require Bundler.environment.specs.detect { |s| s.name == 'jinx' }.full_gem_path + '/examples/family/lib/family'
 
 # Add serialization
-require 'jinx/json/serializer'
+require 'jinx/json/serializable'
 
 module Family
-  include Jinx::JSON::Serializer
+  include Jinx::JSON::Serializable
 end
