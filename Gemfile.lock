@@ -1,16 +1,16 @@
 PATH
-  remote: /Users/loneyf/workspace/jinx/core
-  specs:
-    jinx (2.1.2)
-      bundler
-
-PATH
   remote: .
   specs:
     jinx-json (2.1.2)
       bundler
       jinx
       json_pure
+
+PATH
+  remote: /Users/loneyf/workspace/jinx/core
+  specs:
+    jinx (2.1.2)
+      bundler
 
 GEM
   remote: http://rubygems.org/
