@@ -1,5 +1,5 @@
-require 'set'
 require 'json'
+require 'jinx/json/state'
 require 'jinx/json/collection'
 require 'jinx/json/date'
 require 'jinx/json/deserializable'
@@ -36,19 +36,16 @@ module Jinx
         end
       end
       
-      # @param args the JSON serialization options
+      # @param [State, Hash, nil] state the JSON state or serialization options
       # @return [String] the JSON representation of this {Jinx::Resource}
-      def to_json(*args)
-        visited = Thread.current[:jinx_json_serialized] ||= Set.new
-        top = visited.empty?
-        begin
-          {
-            'json_class' => json_class_name,
-            'data' => json_value_hash(visited)
-          }.to_json(:max_nesting => 100, *args)
-        ensure
-          visited.clear if top
-        end
+      def to_json(state=nil)
+        # Make a new State from the options if this is a top-level call.
+        state = State.for(state) unless State === state
+        # the JSON content
+        {
+          'json_class' => json_class_name,
+          'data' => json_value_hash(state.visited)
+        }.to_json(state)
       end
 
       private
