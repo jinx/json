@@ -1,16 +1,16 @@
 PATH
+  remote: /Users/loneyf/workspace/jinx/core
+  specs:
+    jinx (2.1.3)
+      bundler
+
+PATH
   remote: .
   specs:
     jinx-json (2.1.2)
       bundler
       jinx
       json_pure
-
-PATH
-  remote: /Users/loneyf/workspace/jinx/core
-  specs:
-    jinx (2.1.2)
-      bundler
 
 GEM
   remote: http://rubygems.org/
@@ -23,7 +23,7 @@ GEM
       rspec-core (~> 2.10.0)
       rspec-expectations (~> 2.10.0)
       rspec-mocks (~> 2.10.0)
-    rspec-core (2.10.0)
+    rspec-core (2.10.1)
     rspec-expectations (2.10.0)
       diff-lcs (~> 1.1.3)
     rspec-mocks (2.10.1)
