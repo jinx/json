@@ -77,7 +77,8 @@ module Jinx
           return {:object_id => proxy_object_id}
         end
         visited << self
-        vh = value_hash
+        # Turn off the lazy loader when making the attribute => value hash.
+        vh = do_without_lazy_loader { value_hash }
         vh.each { |pa, v| vh[pa] = v.to_a if Set === v } 
         # Add the object id.
         vh[:object_id] = proxy_object_id
