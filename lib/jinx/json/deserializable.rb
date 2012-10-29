@@ -1,4 +1,4 @@
-require 'jinx/helpers/hashable'
+require 'jinx/helpers/hasher'
 
 module Jinx
   module JSON

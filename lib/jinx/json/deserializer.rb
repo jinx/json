@@ -1,4 +1,4 @@
-require 'jinx/helpers/hashable'
+require 'jinx/helpers/hasher'
 
 module JSON
   # Bumps the default JSON nesting level to 100.
